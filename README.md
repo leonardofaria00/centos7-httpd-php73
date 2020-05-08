@@ -27,7 +27,7 @@ Please note that the new builds since 26/01/2019 are exposing a different port t
 To be able to run Httpd as a non-privileged user, the port it's running on needed
 to change to a non-privileged port (above 1024).
 
-The last build of the old version that exposed port 80 was `trafex/alpine-nginx-php7:ba1dd422`
+The last build of the old version that exposed port 80 was `leonardofaria00/httpd-base_webapp:latest`
 
 ## Usage
 
