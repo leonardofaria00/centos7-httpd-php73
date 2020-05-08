@@ -14,14 +14,25 @@
 </head>
 
 <body class="container">
-    <section>
+    <div class="card text-center">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Gerencia de Sistemas e Inovação - GESIS</h5>
+            <p class="card-text">Imagem Base utilizada pelo Ministério da Defesa.</p>
+            <a href="https://github.com/leonardofaria00/httpd-base" target="_blank" class="btn btn-primary">Go to repository</a>
+        </div>        
+    </div>
+    <section class="card">
         <article class="text-center">
-        <h1 class="text-bold">Imagem Base utilizada pelo Ministério da Defesa!</h1> 
-        <br> 
         HTTP_HOST: <?= $_SERVER['HTTP_HOST']?>
         <br>
         Apache Version: <?= $_SERVER['SERVER_SOFTWARE']?>
         </article>
+        <div class="card-footer text-muted text-center">
+            2 days ago
+        </div>
     </section>
 </body>
 
