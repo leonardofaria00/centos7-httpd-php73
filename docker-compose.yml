@@ -1,3 +1,15 @@
+################################################################################
+# VERSION 0.1.8
+# AUTHOR:         Leonardo Santos <leonardofaria00@gmail.com>
+# DESCRIPTION:    Image CentOS with PHP 7.3 and httpd 2.4
+# TO_BUILD:       docker-compose build
+# TO_RUN:         docker-compose up -d
+#
+# Dockerfile de construção do container WebApp utilizado pelo MD
+#
+# Container preparado e configurado para uso em desenvolvimento e testes
+################################################################################
+
 version: "3.7"
 
 services:
