@@ -1,13 +1,13 @@
 # Base image for development applications
 # Docker PHP-FPM 7.3 & Httpd 2.4 on CentOS 7.7.1809
 Example PHP-FPM 7.3 & Httpd 2.4 setup for Docker, build on [CentOS Linux](https://www.centos.org/).
-The image is only +/- 35MB large.
+The image is only +/- 1373 GB large.
 
 Repository: https://github.com/leonardofaria00/httpd-base
 
 
 * Built on the lightweight and secure CentOS Linux distribution
-* Very small Docker image size (+/-35MB)
+* Very small Docker image size (+/- 1373 GB)
 * Uses PHP 7.3 for better performance, lower cpu usage & memory footprint
 * Optimized for 100 concurrent users
 * Optimized to only use resources when there's traffic (by using PHP-FPM's ondemand PM)
@@ -33,7 +33,7 @@ The last build of the old version that exposed port 80 was `leonardofaria00/http
 
 Start the Docker container:
 
-    docker run -p 80:8080 leonardofaria00/httpd-base_webapp
+    docker run -p 80:80 leonardofaria00/httpd-base_webapp
 
 See the static html info on http://localhost, or the PHP page on http://localhost/info.php
 
