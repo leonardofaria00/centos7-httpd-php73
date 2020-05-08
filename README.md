@@ -17,11 +17,14 @@ Repository: https://github.com/leonardofaria00/httpd-base
 
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/trafex/alpine-nginx-php7.svg)](https://hub.docker.com/repository/docker/leonardofaria00/httpd-base_webapp/)
-[![Httpd 2.4.6](https://img.shields.io/badge/nginx-1.16-brightgreen.svg)]
+
+![Httpd 2.4.6](https://img.shields.io/badge/nginx-1.16-brightgreen.svg)
 (https://httpd.apache.org/docs/2.4/programs/httpd.html)
-[![php 7.3](https://img.shields.io/badge/php-7.3-brightgreen.svg)]
+
+![php 7.3](https://img.shields.io/badge/php-7.3-brightgreen.svg)
 (https://www.php.net/releases/7_3_0.php)
-[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)]
+
+[License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 (https://opensource.org/licenses/MIT)
 
 ### Breaking changes (07/05/20120)
