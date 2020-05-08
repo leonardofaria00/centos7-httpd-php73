@@ -19,19 +19,19 @@
             Featured
         </div>
         <div class="card-body">
-            <h5 class="card-title">Gerencia de Sistemas e Inovação - GESIS</h5>
+            <h5 class="card-title">Gerência de Sistemas e Inovação - GESIS</h5>
             <p class="card-text">Imagem Base utilizada pelo Ministério da Defesa.</p>
             <a href="https://github.com/leonardofaria00/httpd-base" target="_blank" class="btn btn-primary">Go to repository</a>
         </div>        
     </div>
     <section class="card">
         <article class="text-center">
-        HTTP_HOST: <?= $_SERVER['HTTP_HOST']?>
+       <span class="font-weight-bold">Host:</span> <?= $_SERVER['HTTP_HOST']?>
         <br>
-        Apache Version: <?= $_SERVER['SERVER_SOFTWARE']?>
+        <span class="font-weight-bold">Apache Version:</span> <?= $_SERVER['SERVER_SOFTWARE']?>
         </article>
         <div class="card-footer text-muted text-center">
-            2 days ago
+            2 days ago - <?= date('m/d/Y h:i:s a', time());?>
         </div>
     </section>
 </body>
