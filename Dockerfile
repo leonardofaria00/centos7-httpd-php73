@@ -40,6 +40,9 @@ WORKDIR /var/www/html
 # Criando volume para document root
 VOLUME /var/www/html
 
+#Copiando projeto
+COPY app/ /var/www/html
+
 ##################### FIM DA INSTALAÇÃO #####################
 
 # Expondo a porta web
