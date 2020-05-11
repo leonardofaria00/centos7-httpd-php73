@@ -31,7 +31,7 @@
         <span class="font-weight-bold">Apache Version:</span> <?= $_SERVER['SERVER_SOFTWARE']?>
         </article>
         <div class="card-footer text-muted text-center">
-            2 days ago - <?= date('m/d/Y h:i:s a', time());?>
+            <span class="font-weight-bold">Date:</span> <?= date('m/d/Y h:i', time());?>
         </div>
     </section>
 </body>
