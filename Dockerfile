@@ -34,14 +34,14 @@ RUN yum -y --setopt=tsflags=nodocs install \
 # Copiando arquivos de configuração do PHP
 COPY config/php.ini /etc/php.d/custom.ini
 
+# Copiando arquivos do projeto para o document root
+COPY app/ /var/www/html
+
 # Adicionando aplicação
 WORKDIR /var/www/html
 
 # Criando volume para document root
 VOLUME /var/www/html
-
-#Copiando projeto
-COPY app/ /var/www/html
 
 ##################### FIM DA INSTALAÇÃO #####################
 
