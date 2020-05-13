@@ -1,6 +1,6 @@
 # Base image for development applications
-# Docker PHP-FPM 7.3 & Httpd 2.4 on CentOS 7.7.1809
-Example PHP-FPM 7.3 & Httpd 2.4 setup for Docker, build on [CentOS Linux](https://www.centos.org/).
+# Docker PHP 7.3 & Httpd 2.4 on CentOS 7.7.1809
+Example PHP 7.3 & Httpd 2.4 setup for Docker, build on [CentOS Linux](https://www.centos.org/).
 The image is only +/- 1373 GB large.
 
 Repository: https://github.com/leonardofaria00/httpd-base
@@ -11,15 +11,15 @@ Repository: https://github.com/leonardofaria00/httpd-base
 * Uses PHP 7.3 for better performance, lower cpu usage & memory footprint
 * Optimized for 100 concurrent users
 * Optimized to only use resources when there's traffic (by using PHP-FPM's ondemand PM)
-* The servers Httpd, PHP-FPM run under a non-privileged user (apache) to make it more secure
+* The servers Httpd, PHP run under a non-privileged user (apache) to make it more secure
 * The logs of all the services are redirected to the output of the Docker container (visible with `docker logs -f <container name>`)
 * Follows the KISS principle (Keep It Simple, Stupid) to make it easy to understand and adjust the image to your needs
 
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/trafex/alpine-nginx-php7.svg)](https://hub.docker.com/repository/docker/leonardofaria00/httpd-base_webapp/)
-![nginx 1.16.1](https://img.shields.io/badge/nginx-1.16-brightgreen.svg)
-![php 7.3](https://img.shields.io/badge/php-7.3-brightgreen.svg)
-![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Docker Pulls](https://img.shields.io/docker/pulls/trafex/alpine-nginx-php7.svg)](https://hub.docker.com/r/leonardofaria00/httpd-base_webapp)
+[![httpd 2.4.16](https://img.shields.io/badge/nginx-1.16-brightgreen.svg)](https://httpd.apache.org/docs/2.4/pt-br/)
+[![php 7.3](https://img.shields.io/badge/php-7.3-brightgreen.svg)](https://www.php.net/releases/7_3_0.php)
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ### Breaking changes (07/05/20120)
 
