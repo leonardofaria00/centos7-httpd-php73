@@ -1,5 +1,5 @@
 ################################################################################
-# VERSION 0.1.8
+# VERSION v0.0.1
 # AUTHOR:         Leonardo Santos <leonardofaria00@gmail.com>
 # DESCRIPTION:    Image CentOS with PHP 7.3 and httpd 2.4
 # TO_BUILD:       docker-compose build
