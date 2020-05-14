@@ -23,8 +23,9 @@ RUN yum -y install \
 
 # Instalando pacotes httpd e php
 RUN yum -y --setopt=tsflags=nodocs install \
+    wget curl jq cron \
     httpd \
-    php php-fpm php-cli php-fpm php-mysqlnd php-zip php-devel \
+    php php-fpm php-cli php-mysqlnd php-zip php-devel \
     php-gd php-mbstring php-curl php-xml php-pear php-bcmath php-json \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/yum/* \
@@ -42,6 +43,11 @@ WORKDIR /var/www/html
 
 # Criando volume para document root
 VOLUME /var/www/html
+
+# Copia e executa o script de instalação do Projeto
+COPY app-start.sh /opt/
+RUN chmod +x /opt/app-start.sh
+# ENTRYPOINT ["/opt/app-start.sh"]
 
 ##################### FIM DA INSTALAÇÃO #####################
 
