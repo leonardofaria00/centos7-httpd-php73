@@ -14,7 +14,10 @@ version: "3.7"
 
 services:
   webapp:
-    image: leonardofaria00/httpd-base_webapp:latest
+    # image: leonardofaria00/httpd-base_webapp:latest
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
     ports:
       - "80:80"
     volumes:

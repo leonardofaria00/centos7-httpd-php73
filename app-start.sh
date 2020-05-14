@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Instalando dependências do PHP
+# yum install # GOTO
+
 # Removendo arquivos do document root
 rm -rf /var/www/html/*
 
@@ -15,19 +18,21 @@ FOLDER_WEB=/var/www/html/
 # Download e extração de fontes da Aplicação
 if [ "$(ls ${FOLDER_WEB}${FOLDER_APP})" ];
 then
-	echo "GLPI is already installed"
+	echo "Aplication is already installed"
 else
 	wget -P ${FOLDER_WEB} ${SRC_APP}
 	tar -xzf ${FOLDER_WEB}${TAR_APP} -C ${FOLDER_WEB}
 	rm -Rf ${FOLDER_WEB}${TAR_APP}
 	chown -R www-data:www-data ${FOLDER_WEB}${FOLDER_APP}
+	rm -rf /var/www/html/github.com
+	mv /var/www/html/glpi/* /var/www/html
 fi
 
 # Modificando vhost para default
-echo -e "<VirtualHost *:80>\n\tDocumentRoot /var/www/html/app\n\n\t<Directory /var/www/html/app>\n\t\tAllowOverride All\n\t\tOrder Allow,Deny\n\t\tAllow from all\n\t</Directory>\n\n\tErrorLog /var/log/apache2/error-app.log\n\tLogLevel warn\n\tCustomLog /var/log/apache2/access-app.log combined\n</VirtualHost>" > /etc/apache2/sites-available/000-default.conf
+echo -e "<VirtualHost *:80>\n\tDocumentRoot /var/www/html\n\n\t<Directory /var/www/html>\n\t\tAllowOverride All\n\t\tOrder Allow,Deny\n\t\tAllow from all\n\t</Directory>\n\n\tErrorLog /var/log/apache2/error-app.log\n\tLogLevel warn\n\tCustomLog /var/log/apache2/access-app.log combined\n</VirtualHost>" > /etc/apache2/sites-available/000-default.conf
 
 # Incluindo tarefas agendadas pelo cron e ativando
-echo "*/2 * * * * www-data /usr/bin/php /var/www/html/app/front/cron.php &>/dev/null" >> /etc/cron.d/app
+echo "*/2 * * * * www-data /usr/bin/php /var/www/html/front/cron.php &>/dev/null" >> /etc/cron.d/app
 
 # Start cron service
 service cron start
@@ -36,4 +41,4 @@ service cron start
 a2enmod rewrite && service apache2 restart && service apache2 stop
 
 # Lancement du service apache au premier plan
-exec /usr/sbin/apache2ctl -D FOREGROUND
+exec /usr/sbin/httpd -D FOREGROUND

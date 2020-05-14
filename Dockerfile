@@ -47,7 +47,7 @@ VOLUME /var/www/html
 # Copia e executa o script de instalação do Projeto
 COPY app-start.sh /opt/
 RUN chmod +x /opt/app-start.sh
-# ENTRYPOINT ["/opt/app-start.sh"]
+ENTRYPOINT ["/opt/app-start.sh"]
 
 ##################### FIM DA INSTALAÇÃO #####################
 

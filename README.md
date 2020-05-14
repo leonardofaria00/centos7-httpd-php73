@@ -35,7 +35,7 @@ Start the Docker container:
 
     docker run -p 80:80 leonardofaria00/httpd-base_webapp
 
-See the static html info on http://localhost, or the PHP page on http://localhost/info.php
+See the PHP page on http://localhost, or the aplication page running app-start.sh with entrypoint
 
 Or mount your own code to be served by PHP-FPM & Httpd
 
