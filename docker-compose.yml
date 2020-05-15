@@ -1,4 +1,4 @@
-################################################################################
+#########################################################################
 # VERSION 0.1.8
 # AUTHOR:         Leonardo Santos <leonardofaria00@gmail.com>
 # DESCRIPTION:    Image CentOS with PHP 7.3 and httpd 2.4
@@ -8,17 +8,15 @@
 # Dockerfile de construção do container WebApp utilizado pelo MD
 #
 # Container preparado e configurado para uso em desenvolvimento e testes
-################################################################################
+#########################################################################
 
+# TODO
 version: "3.7"
 
 services:
   webapp:
-    # image: leonardofaria00/httpd-base_webapp:latest
-    build: 
+    build:
       context: .
       dockerfile: ./Dockerfile
     ports:
       - "80:80"
-    volumes:
-      - ./app:/var/www/html/
