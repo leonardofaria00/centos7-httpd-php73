@@ -1,15 +1,16 @@
-#########################################################################
+####################################################################################
 # VERSION v0.0.1
 # AUTHOR:         Leonardo Santos <leonardofaria00@gmail.com>
 # DESCRIPTION:    Image CentOS with PHP 7.3 and httpd 2.4
-
+#
 # TO_BUILD:       docker build --pull --rm -f "Dockerfile" -t httpd-base:latest "."
 # TO_RUN:         docker run --rm -it  -p 80:80/tcp httpd-base:latest
 #
 # Dockerfile de construção do container WebApp utilizado pelo MD
 #
 # Container preparado e configurado para uso em desenvolvimento e testes
-#########################################################################
+####################################################################################
+
 
 # TODO
 FROM centos:7.7.1908
