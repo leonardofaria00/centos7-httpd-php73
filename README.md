@@ -7,7 +7,7 @@ Repository: https://github.com/leonardofaria00/httpd-base
 
 
 * Built on the lightweight and secure CentOS Linux distribution
-* Very small Docker image size (+/- 1373 GB)
+* Very small Docker image size (+/- 1583 GB)
 * Uses PHP 7.3 for better performance, lower cpu usage & memory footprint
 * Optimized for 100 concurrent users
 * Optimized to only use resources when there's traffic (by using PHP-FPM's ondemand PM)
