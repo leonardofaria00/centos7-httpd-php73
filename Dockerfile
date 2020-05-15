@@ -2,8 +2,9 @@
 # VERSION v0.0.1
 # AUTHOR:         Leonardo Santos <leonardofaria00@gmail.com>
 # DESCRIPTION:    Image CentOS with PHP 7.3 and httpd 2.4
-# TO_BUILD:       docker-compose build
-# TO_RUN:         docker-compose up -d
+
+# TO_BUILD:       docker build --pull --rm -f "Dockerfile" -t httpd-base:latest "."
+# TO_RUN:         docker run --rm -it  -p 80:80/tcp httpd-base:latest
 #
 # Dockerfile de construção do container WebApp utilizado pelo MD
 #
@@ -22,8 +23,8 @@ RUN yum -y install \
 
 # Instalando pacotes httpd e php
 RUN yum -y --setopt=tsflags=nodocs install \
-    wget curl jq cron \
     httpd \
+    wget curl jq cron \
     php php-fpm php-cli php-mysqlnd php-zip php-devel \
     php-gd php-mbstring php-curl php-xml php-pear php-bcmath php-json \
     && rm -rf /tmp/* \
