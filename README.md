@@ -21,7 +21,7 @@ Repository: https://github.com/leonardofaria00/centos7-httpd-php73
 [![php 7.3](https://img.shields.io/badge/php-7.3-brightgreen.svg)](https://www.php.net/releases/7_3_0.php)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-### Breaking changes (07/05/20120)
+### Breaking changes (07/05/2020)
 
 Please note that the new builds since 26/01/2019 are exposing a different port to access Httpd.
 To be able to run Httpd as a non-privileged user, the port it's running on needed
