@@ -19,7 +19,7 @@
         <div class="card-body">
             <h5 class="card-title">Gerência de Sistemas de Informação - GESIS</h5>
             <p class="card-text">Imagem Base utilizada pelo Ministério da Defesa.</p>
-            <a href="https://github.com/leonardofaria00/httpd-base" target="_blank" class="btn btn-success">Ir para o
+            <a href="https://github.com/leonardofaria00/centos7-httpd-php73" target="_blank" class="btn btn-success">Ir para o
             repositório</a>
         </div>
     </div>
@@ -30,7 +30,7 @@
             <span class="font-weight-bold">Apache Version:</span> <?= $_SERVER['SERVER_SOFTWARE']?>
         </article>
         <div class="card-footer text-muted text-center">
-            <span class="font-weight-bold">Date:</span> <?= date('m/d/Y h:i', time());?>
+            <span class="font-weight-bold">Date:</span> <?= date('d/m/Y h:i', time());?>
         </div>
     </section>
 </body>
