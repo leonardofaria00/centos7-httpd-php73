@@ -25,7 +25,6 @@ RUN yum -y install \
 # Instalando pacotes httpd e php
 RUN yum -y --setopt=tsflags=nodocs install \
     httpd \
-    wget curl jq cron \
     php php-fpm php-cli php-mysqlnd php-zip php-devel \
     php-gd php-mbstring php-curl php-xml php-pear php-bcmath php-json \
     && rm -rf /tmp/* \
