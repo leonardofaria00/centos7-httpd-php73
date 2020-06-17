@@ -1,5 +1,5 @@
 ####################################################################################
-# VERSION v0.0.1
+# VERSION v0.0.2
 # AUTHOR:         Leonardo Santos <leonardofaria00@gmail.com>
 # DESCRIPTION:    Image CentOS7 with PHP 7.3 and httpd 2.4
 #
@@ -22,7 +22,7 @@ RUN yum -y install \
     http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
     && yum-config-manager --enable remi-php73
 
-# Instalando pacotes httpd e php
+# Instalando httpd e php
 RUN yum -y --setopt=tsflags=nodocs install \
     httpd \
     php php-fpm php-cli php-mysqlnd php-zip php-devel \
@@ -42,7 +42,7 @@ COPY config/php.ini /etc/php.d/custom.ini
 WORKDIR /var/www/html
 
 # Expondo a porta web
-EXPOSE 80 443
+EXPOSE 80
 
 # Iniciando projeto
 CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
