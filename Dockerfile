@@ -42,7 +42,7 @@ COPY config/php.ini /etc/php.d/custom.ini
 WORKDIR /var/www/html
 
 # Expondo a porta web
-EXPOSE 80 443
+EXPOSE 80
 
 # Iniciando projeto
 CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
