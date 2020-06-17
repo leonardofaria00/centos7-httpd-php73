@@ -32,22 +32,17 @@ RUN yum -y --setopt=tsflags=nodocs install \
     && rm -rf /run/httpd/* /tmp/httpd* \
     && yum clean all
 
-# Copiando arquivos de configuração do PHP
-COPY config/php.ini /etc/php.d/custom.ini
-
 # Copiando arquivos do projeto para o document root
 COPY app/ /var/www/html
+
+# Copiando arquivos de configuração do PHP
+COPY config/php.ini /etc/php.d/custom.ini
 
 # Adicionando aplicação
 WORKDIR /var/www/html
 
-# Criando volume para document root
-VOLUME /var/www/html
-
-##################### FIM DA INSTALAÇÃO #####################
-
 # Expondo a porta web
-EXPOSE 80
+EXPOSE 80 443
 
 # Iniciando projeto
 CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]

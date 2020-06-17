@@ -19,6 +19,7 @@
         <div class="card-body">
             <h5 class="card-title">Gerência de Sistemas de Informação - GESIS</h5>
             <p class="card-text">Imagem Base utilizada pelo Ministério da Defesa.</p>
+            <a href="info.php" class="btn btn-info">Informações</a>
             <a href="https://github.com/leonardofaria00/centos7-httpd-php73" target="_blank" class="btn btn-success">Ir para o
             repositório</a>
         </div>
