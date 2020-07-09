@@ -10,7 +10,6 @@
 # Container preparado e configurado para uso em desenvolvimento e testes
 #########################################################################
 
-# TODO
 version: "3.7"
 
 services:

@@ -11,8 +11,6 @@
 # Container preparado e configurado para uso em desenvolvimento e testes
 ####################################################################################
 
-
-# TODO
 FROM centos:7.7.1908
 
 # Instalando repositório PHP
