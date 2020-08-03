@@ -20,9 +20,9 @@ RUN yum -y install \
     http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
     && yum-config-manager --enable remi-php73
 
-# Instalando httpd e php
+# Instalando HTTPD e PHP
 RUN yum -y --setopt=tsflags=nodocs install \
-    httpd \
+    httpd composer git \
     php php-fpm php-cli php-mysqlnd php-zip php-devel \
     php-gd php-mbstring php-curl php-xml php-pear php-bcmath php-json \
     && rm -rf /tmp/* \
