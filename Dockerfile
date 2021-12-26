@@ -11,7 +11,7 @@
 # Container preparado e configurado para uso em desenvolvimento e testes
 ####################################################################################
 
-FROM centos:7.7.1908
+FROM centos:7.9.2009
 
 # Instalando repositório PHP
 RUN yum -y --setopt=tsflags=nodocs update
